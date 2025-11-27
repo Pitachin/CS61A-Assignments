@@ -20,11 +20,17 @@ def num_eights(n):
     3
     >>> from construct_check import check
     >>> # ban all assignment statements
-    >>> check(HW_SOURCE_FILE, 'num_eights',
-    ...       ['Assign', 'AnnAssign', 'AugAssign', 'NamedExpr', 'For', 'While'])
+    >>> chenum_eights',
+    ...       ['Assign', 'AnnAsck(HW_SOURCE_FILE, 'sign', 'AugAssign', 'NamedExpr', 'For', 'While'])
     True
     """
-    "*** YOUR CODE HERE ***"
+    if 0 <= n < 10: # just single digit, (base case)
+        if n == 8:
+            return 1
+        else:
+            return 0
+    
+    return num_eights(n // 10) + num_eights(n % 10)
 
 
 def digit_distance(n):
